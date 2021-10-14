@@ -1,25 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// Importing Task Context Provider
+import { TaskContextProvider } from './Context/TaskContext';
 
-export default App;
+// Importing Component
+import { InputField } from './component/InputField';
+import { TaskList } from './component/TaskList';
+
+
+export const App = () => {
+    return (
+        <TaskContextProvider>
+            <h1 className='main-heading'>Todo App</h1>
+            <div className='container'>
+                <InputField />
+                <TaskList />
+            </div>
+        </TaskContextProvider>
+    )
+}

@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+    outline: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background: #485563;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    line-height: 1.5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.main-heading {
+    font-size: 3.2rem;
+    text-align: center;
+    margin-top: 70px;
+    color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.container {
+    max-width: 550px;
+    margin: 20px auto 0px;
 }
 
-.App-link {
-  color: #61dafb;
+form {
+    margin: 20px auto;
+    width: 100%;
+    position: relative;
+    top: 0;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form > input {
+    width: 100%;
+    display: block;
+    padding: 7px 71px 7px 12px;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.02rem;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #b6b6b6;
+}
+
+form > input:focus {
+    border: 1px solid #ffffff;
+    outline: none;
+}
+
+form > button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    height: 34px;
+    width: 63px;
+    color: #ffffff;
+    font-size: 1.02rem;
+    font-weight: 400;
+    background-color: transparent;
+    border: 1px solid #b6b6b6;
+    transition: all 150ms linear;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.btn:hover {
+    border-color: #ffffff;
+}
+
+.btn:active {
+    font-size: .93rem;
+}
+
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+h2 {
+    text-align: center;
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+select {
+    font-size: 1.2rem;
+    padding: 9px 12px;
+    background-color: #3e4a57;
+    color: #ffffff;
+}
+
+.task {
+    margin: 10px 0px;
+    border: 1px solid #b6b6b6;
+    position: relative;
+    top: 0%;
+    border-radius: 3px;
+    transition: all .3s linear;
+}
+
+.task:hover {
+    margin: 10px 0px 40px;
+}
+
+p {
+    display: flex;
+    align-items: center;
+    padding: 7px;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.02rem;
+}
+
+.task input {
+    width: 100%;
+    height: 100%;
+    padding: 10px 7px;
+    background-color: #1d252e;
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.02rem;
+    border: none;
+}
+
+.button {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s linear;
+}
+
+.task:hover > .button {
+    opacity: 1;
+    pointer-events: all;
 }
